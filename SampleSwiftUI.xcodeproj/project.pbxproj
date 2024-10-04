@@ -17,7 +17,7 @@
 		08145C482CB0001000FABE18 /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08145C472CB0001000FABE18 /* ListingDetailView.swift */; };
 		08145C4C2CB0019C00FABE18 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08145C492CB0019C00FABE18 /* Listing.swift */; };
 		08145C4D2CB0019C00FABE18 /* ListingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08145C4A2CB0019C00FABE18 /* ListingsViewModel.swift */; };
-		08145C4E2CB0019C00FABE18 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08145C4B2CB0019C00FABE18 /* NetworkService.swift */; };
+		08145C502CB018AE00FABE18 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08145C4F2CB018AE00FABE18 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		08145C472CB0001000FABE18 /* ListingDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
 		08145C492CB0019C00FABE18 /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		08145C4A2CB0019C00FABE18 /* ListingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewModel.swift; sourceTree = "<group>"; };
-		08145C4B2CB0019C00FABE18 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		08145C4F2CB018AE00FABE18 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +103,8 @@
 		08145C1B2CAFFB6D00FABE18 /* SampleSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				08145C4F2CB018AE00FABE18 /* Constants.swift */,
 				08145C492CB0019C00FABE18 /* Listing.swift */,
-				08145C4B2CB0019C00FABE18 /* NetworkService.swift */,
 				08145C4A2CB0019C00FABE18 /* ListingsViewModel.swift */,
 				08145C1E2CAFFB6D00FABE18 /* ListingsView.swift */,
 				08145C472CB0001000FABE18 /* ListingDetailView.swift */,
@@ -275,8 +275,8 @@
 				08145C1F2CAFFB6D00FABE18 /* ListingsView.swift in Sources */,
 				08145C482CB0001000FABE18 /* ListingDetailView.swift in Sources */,
 				08145C4C2CB0019C00FABE18 /* Listing.swift in Sources */,
-				08145C4E2CB0019C00FABE18 /* NetworkService.swift in Sources */,
 				08145C1D2CAFFB6D00FABE18 /* SampleSwiftUIApp.swift in Sources */,
+				08145C502CB018AE00FABE18 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,26 +11,21 @@ struct ListingDetailView: View {
     let listing: Listing
 
     var body: some View {
-        ScrollView {
-            VStack {
-                AsyncImage(url: URL(string: listing.imageUrls.first ?? "")) { image in
-                    image.resizable()
-                         .scaledToFit()
-                         .frame(height: 300)
-                } placeholder: {
-                    ProgressView()
-                }
-                Text(listing.name)
-                    .font(.largeTitle)
-                    .padding()
-                Text(listing.price)
-                    .font(.title2)
-                    .foregroundColor(.gray)
-                Text("Created At: \(listing.createdAt)")
-                    .font(.footnote)
-                    .foregroundColor(.gray)
-                    .padding()
+        VStack {
+            AsyncImage(url: URL(string: listing.imageUrls.first ?? "")) { image in
+                image.resizable()
+                     .aspectRatio(contentMode: .fit)
+                     .frame(maxWidth: .infinity)
+            } placeholder: {
+                ProgressView()
             }
+            Text(listing.name)
+                .font(.largeTitle)
+                .padding()
+            Text(listing.price)
+                .font(.title2)
+                .padding()
+            Spacer()
         }
         .navigationTitle(listing.name)
     }
