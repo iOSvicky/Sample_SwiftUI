@@ -17,8 +17,8 @@ struct ListingsView: View {
                     HStack {
                         AsyncImage(url: URL(string: listing.imageUrls.first ?? "")) { image in
                             image.resizable()
-                                 .scaledToFit()
-                                 .frame(width: 100, height: 100)
+                                 .aspectRatio(contentMode: .fit)
+                                 .frame(width: 50, height: 50)
                         } placeholder: {
                             ProgressView()
                         }
@@ -31,7 +31,7 @@ struct ListingsView: View {
                     }
                 }
             }
-            .navigationTitle("Sample listings")
+            .navigationTitle(Constants.sampleTitle)
             .onAppear {
                 viewModel.fetchListings()
             }

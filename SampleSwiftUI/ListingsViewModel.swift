@@ -10,19 +10,26 @@ import Combine
 
 class ListingsViewModel: ObservableObject {
     @Published var listings: [Listing] = []
-    private var cancellables = Set<AnyCancellable>()
-    private let networkService = NetworkService()
 
     func fetchListings() {
-        Task {
+        let urlString = Constants.baseURL + Constants.fetchListingsEndpoint
+          guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                print("\(Constants.errorFetchingListings + (error?.localizedDescription ?? Constants.unknownError))")
+                return
+            }
+
             do {
-                let fetchedListings = try await networkService.fetchListings()
+                let decoder = JSONDecoder()
+                let response = try decoder.decode(Response.self, from: data)
                 DispatchQueue.main.async {
-                    self.listings = fetchedListings
+                    self.listings = response.results
                 }
             } catch {
-                print("Error fetching listings: \(error.localizedDescription)")
+                print("\(Constants.decodingJSONError + error.localizedDescription)")
             }
-        }
+        }.resume()
     }
 }
